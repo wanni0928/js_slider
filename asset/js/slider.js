@@ -13,21 +13,29 @@ function resetImageList(){
     imgList[0].setAttribute("style", `z-index:99999; background-color:${colors[0]}`);
 }
 
-function clickPrevBtn(e){
+function prevSlide(){
     if(idx === 0){
         idx = imgList.length - 1;
     }else{
         idx--;
     }
-    controllImageList(idx);
 }
 
-function clickNextBtn(e){
+function nextSlide(){
     if(idx === imgList.length - 1){
         idx = 0;
     }else{
         idx++;
     }
+}
+
+function clickPrevBtn(e){
+    prevSlide();
+    controllImageList(idx);
+}
+
+function clickNextBtn(e){
+    nextSlide();
     controllImageList(idx);
 }
 
@@ -54,6 +62,10 @@ function paintBackgroundColor(){
 function init() {
     // paintBackgroundColor();
     sliderController();
+    setInterval(function(){
+        nextSlide();
+        controllImageList(idx);
+    }, 3000);
 }
 
 init();
