@@ -10,7 +10,7 @@ function resetImageList(){
         
     });
 
-    imgList[0].setAttribute("style", `z-index:99999; bacground-color:${colors[0]}`);
+    imgList[0].setAttribute("style", `z-index:99999; background-color:${colors[0]}`);
 }
 
 function clickPrevBtn(e){
@@ -36,7 +36,7 @@ function controllImageList(idx){
         img.setAttribute("style", "");
     });
 
-    imgList[idx].setAttribute("style", `z-index:99999; bacground-color:${colors[0]}`);
+    imgList[idx].setAttribute("style", `z-index:99999; background-color:${colors[0]}`);
 }
 
 function sliderController(){
