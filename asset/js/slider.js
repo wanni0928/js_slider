@@ -36,7 +36,7 @@ function controllImageList(idx){
         img.setAttribute("style", "");
     });
 
-    imgList[idx].setAttribute("style", `z-index:99999; background-color:${colors[0]}`);
+    imgList[idx].setAttribute("style", `z-index:99999; background-color:${colors[idx]}`);
 }
 
 function sliderController(){
